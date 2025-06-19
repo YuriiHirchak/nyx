@@ -1,15 +1,13 @@
 {
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist",
-        "buildCommand": "npx expo export:web --output-dir dist"
-      }
-    }
-  ],
+  "buildCommand": "./vercel-build.sh",
+  "outputDirectory": "dist",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
-  ]
+  ],
+  "cache": {
+    "paths": [
+      "node_modules/**",
+      "dist/**"
+    ]
+  }
 }
