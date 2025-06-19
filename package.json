@@ -9,7 +9,7 @@
     "android": "npx expo run:android",
     "ios": "npx expo run:ios",
     "web": "npx expo start --web",
-    "build": "react-scripts build"
+    "build": "npx expo export:web --output-dir dist"
   },
   "dependencies": {
     "expo": "^52.0.46",
